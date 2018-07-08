@@ -17,5 +17,5 @@ COPY etc/supervisord.d/*.ini /etc/supervisord.d/
 RUN newaliases
 
 EXPOSE 25
-#ENTRYPOINT ["/run.sh"]
+
 CMD ["/run.sh"]
