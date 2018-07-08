@@ -1,6 +1,5 @@
-#Dockerfile for a Postfix email relay service
 FROM centos:latest
-MAINTAINER Juan Luis Baptiste juan.baptiste@gmail.com
+LABEL MAINTAINER exalif
 
 RUN yum install -y epel-release && yum update -y && \
     yum install -y cyrus-sasl cyrus-sasl-plain cyrus-sasl-md5 mailx \
