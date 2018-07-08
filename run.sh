@@ -46,5 +46,4 @@ if [ ! -f /etc/postfix/sasl_passwd ]; then
   fi
 fi
 
-#Start services
-supervisord
+concurrently --kill-others -n "log,supervisor" "touch /var/log/maillog && tail -f /var/log/maillog" "supervisord"
